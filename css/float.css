@@ -1,5 +1,281 @@
 * {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
+}
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Varela Round", sans-serif;
+  line-height: 1.6;
+  color: #3a3a3a;
+}
+
+p {
+  font-size: 0.95em;
+  margin-bottom: 1.8em;
+}
+
+.tagline {
+  color: #b64040;
+}
+
+h2,
+h3,
+a {
+  color: #093a58;
+}
+
+h2,
+h3,
+h4 {
+  margin-top: 0;
+}
+
+h4 {
+  margin-bottom: 0.4em;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+figure {
+  margin: 0;
+  line-height: 0;
+  position: relative;
+}
+
+figcaption {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #fff;
+  padding: 1em;
+  background: rgba(19, 43, 102, 0.85);
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ================================= 
+  Base Class Styles
+==================================== */
+
+.profile_picture {
+  width: 4.5%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+.name {
+  font-size: 1.25em;
+  margin: 0;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+
+.name a,
+.main-nav a {
+  display: block;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.main-nav a {
+  font-size: 0.95em;
+  color: #1fddcd;
+  text-transform: uppercase;
+}
+
+.main-nav a:hover {
+  color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.banner,
+.main-footer {
+  text-align: center;
+}
+
+.banner {
+  background: linear-gradient(to top, #fff, transparent),
+    url("../img/chicago_skyline.jpg") no-repeat center;
+  background-size: cover;
+  height: 800px;
+  padding: 3.2em 0;
+  margin-bottom: 60px;
+}
+
+.col {
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+.main-footer {
+  background: #d9e4ea;
+  padding: 2em 0;
+  margin-top: 30px;
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+  width: 190px;
+}
+
+.headline {
+  margin-bottom: 0;
+  color: #b64040;
+}
+
+.icon-location {
+  width: 35px;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  z-index: 2;
+}
+
+.pizza {
+    margin: 10% 5% auto;
+}
+
+.pizza_image{
+  float: left;
+    padding-right: 10px;
+
+}
+
+.coffee {
+  padding-top: 20px;
+  margin: 8% 4% auto;
+}
+
+.coffee_image {
+  float: right;
+  padding-bottom: 100px;
+ 
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+  body {
+    padding-top: 60px;
+  }
+
+  .main-header {
+    position: fixed;
+    background: #fff;
+    background-image: radial-gradient(
+      circle at top right,
+      #082863,
+      rgb(7, 148, 243)
+    );
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+  .name,
+  .col {
+    float: left;
+  }
+
+  
+
+  .main-nav {
+    float: right;
+  }
+
+  .main-nav li {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  .tagline {
+    font-size: 1.4em;
+  }
+
+
+  /* ---- Float clearfix ---- */
+
+  .clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+@media (max-width: 1600px) and (min-width: 702px)
+.container {
+    flex-direction: row;
+    max-width: 1150px;
+    
+    flex-wrap: wrap;
+    text-align: center;
+    
+    justify-content: space-around;
+  }
+
+  .primary,
+  .secondary,
+  .tertiary {
+    width: 33%;
+  }
+}
+
+@media (max-width: 1600px) and (min-width: 702px) .social_media {
+  bottom: 20%;
+  right: 2.5em;
+}
+
+.social_media {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 13%;
+  right: 1em;
+}
+
+.icons {
+  margin: 10%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+ul {
+  list-style-type: none;
+}
